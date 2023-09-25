@@ -146,7 +146,7 @@ function reconfigureInterfaces () {
 #########################
 function dashToDock () {
 
-	# Set root @reboot cron
+	# Set @reboot cron
 	echo "@reboot /home/$2/dash-to-dock.sh" | crontab -u "$2" -
 
 	# Set script
