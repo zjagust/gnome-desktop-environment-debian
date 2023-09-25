@@ -17,6 +17,8 @@ This script will run on a minimal installation of Debian operating system, or on
 * [Home/Small Office – Debian Server Initial Customization](https://zacks.eu/debian-server-initial-customization/)
 * [Initial Customization for Debian Server minimal installations](https://github.com/zjagust/debian-server-initial-customization)
 
+The script assumes only one interface is active on the machine where it will run, either wired (eth0) or WiFi (wlan0).
+
 ### Script Installation
 You can clone this repository anywhere on your computer (or virtual machine), i.e.:
 
