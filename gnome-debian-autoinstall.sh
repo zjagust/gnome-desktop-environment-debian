@@ -99,16 +99,16 @@ function installGnome () {
 		DEBIAN_FRONTEND=noninteractive aptitude install -y -R alsa-utils chrome-gnome-shell cups-common dbus-x11 \
 		dconf-editor firefox-esr fuse_ fuse3 gdm3 gjs gkbd-capplet gnome-applets gnome-control-center gnome-keyring \
 		gnome-online-accounts gnome-session gnome-shell-extension-dashtodock gnome-shell-extensions gnome-terminal \
-		gnome-tweaks mutter nautilus nautilus-extension-gnome-terminal network-manager-gnome sane-airscan \
-		sane-utils software-properties-gtk sudo xdg-desktop-portal xdg-desktop-portal-gtk xdg-user-dirs
+		gnome-tweaks gvfs-backends gvfs-fuse mutter nautilus nautilus-extension-gnome-terminal network-manager-gnome \
+		sane-airscan sane-utils software-properties-gtk sudo xdg-desktop-portal xdg-desktop-portal-gtk xdg-user-dirs
 	else
 		DEBIAN_FRONTEND=noninteractive aptitude install -y -R alsa-utils chrome-gnome-shell cups-common \
 		dbus-x11 dconf-editor firefox-esr fuse_ fuse3 gdm3 gjs gkbd-capplet gnome-applets gnome-control-center \
 		gnome-keyring gnome-online-accounts gnome-session gnome-shell-extension-dashtodock gnome-shell-extensions \
-		gnome-shell-extensions-extra gnome-shell-extension-manager gnome-terminal gnome-tweaks mutter \
-		nautilus nautilus-extension-gnome-terminal network-manager-gnome power-profiles-daemon sane-airscan \
-		sane-utils software-properties-gtk sudo xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk \
-		xdg-user-dirs
+		gnome-shell-extensions-extra gnome-shell-extension-manager gnome-terminal gnome-tweaks gvfs-backends \
+		gvfs-fuse mutter nautilus nautilus-extension-gnome-terminal network-manager-gnome power-profiles-daemon \
+		sane-airscan sane-utils software-properties-gtk sudo xdg-desktop-portal xdg-desktop-portal-gnome \
+		xdg-desktop-portal-gtk xdg-user-dirs
 	fi
 
 }
