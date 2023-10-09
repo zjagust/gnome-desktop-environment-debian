@@ -162,6 +162,7 @@ function dashToDock () {
 		nmcli con up InterWebz ifname $INTERFACE_NAME
 		cat > /home/"$2"/dash-to-dock.sh <<- EOF
 		#!/bin/bash -i
+		ssh-keygen -b 4096 -t rsa -f /home/"$2"/.ssh/id_rsa -q -N ""
 		dbus-launch gnome-extensions enable dash-to-dock@micxgx.gmail.com
 		killall -SIGQUIT gnome-shell
 		dbus-launch gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
@@ -184,7 +185,7 @@ function dashToDock () {
 	else
 		cat > /home/"$2"/dash-to-dock.sh <<- EOF
 		#!/bin/bash -i
-		sleep 5
+		ssh-keygen -b 4096 -t rsa -f /home/"$2"/.ssh/id_rsa -q -N ""
 		dbus-launch gnome-extensions enable dash-to-dock@micxgx.gmail.com
 		killall -SIGQUIT gnome-shell
 		dbus-launch gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
