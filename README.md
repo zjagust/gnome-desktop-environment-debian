@@ -30,7 +30,7 @@ Once repository is cloned, execute the following:
 
 ```bash
 cd /tmp/gnome-desktop-environment-debian
-. gnome-debian-autoinstall.sh
+bash gnome-debian-autoinstall.sh
 ```
 
 Let the script do its work!
