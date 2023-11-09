@@ -96,19 +96,20 @@ function installGnome () {
 	# Install GNOME Packages
 	if [[ "$OS_VERSION" == "11" ]]
 	then
-		DEBIAN_FRONTEND=noninteractive aptitude install -y -R alsa-utils chrome-gnome-shell cups-common dbus-x11 \
-		dconf-editor firefox-esr fuse_ fuse3 gdm3 gjs gkbd-capplet gnome-applets gnome-control-center gnome-disk-utility \
-		gnome-keyring gnome-online-accounts gnome-session gnome-shell-extension-dashtodock gnome-shell-extensions \
-		gnome-terminal gnome-tweaks mutter nautilus nautilus-extension-gnome-terminal network-manager-gnome rclone \
-		sane-airscan sane-utils seahorse software-properties-gtk sudo xdg-desktop-portal xdg-desktop-portal-gtk xdg-user-dirs
-	else
-		DEBIAN_FRONTEND=noninteractive aptitude install -y -R alsa-utils chrome-gnome-shell cups-common \
-		dbus-x11 dconf-editor firefox-esr fuse_ fuse3 gdm3 gjs gkbd-capplet gnome-applets gnome-control-center \
+		DEBIAN_FRONTEND=noninteractive aptitude install -y -R alsa-utils bat chrome-gnome-shell cups-common dbus-x11 \
+		dbus-user-session dconf-editor firefox-esr fuse_ fuse3 gdm3 gjs gkbd-capplet gnome-applets gnome-control-center \
 		gnome-disk-utility gnome-keyring gnome-online-accounts gnome-session gnome-shell-extension-dashtodock \
-		gnome-shell-extensions gnome-shell-extensions-extra gnome-shell-extension-manager gnome-terminal gnome-tweaks \
-		mutter nautilus nautilus-extension-gnome-terminal network-manager-gnome power-profiles-daemon rclone \
-		sane-airscan sane-utils seahorse software-properties-gtk sudo xdg-desktop-portal xdg-desktop-portal-gnome \
+		gnome-shell-extensions gnome-terminal gnome-tweaks mutter nautilus nautilus-extension-gnome-terminal \
+		network-manager-gnome rclone sane-airscan sane-utils seahorse software-properties-gtk sudo xdg-desktop-portal \
 		xdg-desktop-portal-gtk xdg-user-dirs
+	else
+		DEBIAN_FRONTEND=noninteractive aptitude install -y -R alsa-utils bat chrome-gnome-shell cups-common \
+		dbus-user-session dbus-x11 dconf-editor firefox-esr fuse_ fuse3 gdm3 gjs gkbd-capplet gnome-applets \
+		gnome-control-center gnome-disk-utility gnome-keyring gnome-online-accounts gnome-session \
+		gnome-shell-extension-dashtodock gnome-shell-extensions gnome-shell-extensions-extra \
+		gnome-shell-extension-manager gnome-terminal gnome-tweaks mutter nautilus nautilus-extension-gnome-terminal \
+		network-manager-gnome power-profiles-daemon rclone sane-airscan sane-utils seahorse software-properties-gtk \
+		sudo xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-user-dirs
 	fi
 
 }
